@@ -12,18 +12,19 @@ public class SearchComponent extends Base {
     @FindBy(name="q")
     private WebElement searchBox;
 
-    @FindBy(name="btnk")
-    private List<WebElement> searchBtns;
+    //@FindBy(name="btnk")
+    //private List<WebElement> searchBtns;
 
     public void search(String keyword)
     {
         this.searchBox.sendKeys(keyword);
-        this.searchBox.sendKeys(Keys.TAB);
-        this.searchBtns
-                .stream()
-                .filter(e -> e.isDisplayed() && e.isEnabled())
-                .findFirst()
-                .ifPresent(WebElement::click);
+        this.searchBox.sendKeys(Keys.ENTER);
+
+//        this.searchBtns
+//                .stream()
+//                .filter(e -> e.isDisplayed() && e.isEnabled())
+//                .findFirst()
+//                .ifPresent(WebElement::click);
     }
 
     @Override

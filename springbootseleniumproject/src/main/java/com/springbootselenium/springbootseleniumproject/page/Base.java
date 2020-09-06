@@ -18,6 +18,7 @@ public abstract class Base {
     @PostConstruct
     public void init()
     {
+        driver.manage().window().maximize();
         PageFactory.initElements(this.driver,this);
     }
 
