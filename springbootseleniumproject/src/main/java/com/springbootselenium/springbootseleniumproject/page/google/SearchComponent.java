@@ -4,9 +4,12 @@ import com.springbootselenium.springbootseleniumproject.page.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+
+@Lazy
 @Component
 public class SearchComponent extends Base {
     @FindBy(name="q")
