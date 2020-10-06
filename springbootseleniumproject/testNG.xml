@@ -1,0 +1,12 @@
+<suite name="Spring Boot Test" parallel="tests">
+    <test name="Google">
+        <classes>
+            <class name="com.springbootselenium.springbootseleniumproject.googleTests.GoogleTest"/>
+        </classes>
+    </test>
+    <test name="Google2">
+        <classes>
+            <class name="com.springbootselenium.springbootseleniumproject.googleTests.GoogleTest2"/>
+        </classes>
+    </test>
+</suite>
