@@ -1,5 +1,6 @@
 package com.springbootselenium.springbootseleniumproject.config;
 
+import com.springbootselenium.springbootseleniumproject.annotation.LazyConfiguration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,8 +18,9 @@ import org.springframework.context.annotation.Profile;
 
 import java.net.URL;
 
-@Lazy
-@Configuration
+//@Lazy
+//@Configuration
+@LazyConfiguration
 @Profile("remote")
 public class RemoteWebDriverConfig {
 

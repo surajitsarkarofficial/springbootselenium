@@ -30,8 +30,9 @@ public class GoogleTest extends SpringBaseTestNGTests {
         System.out.println("Google search test entered..");
         Assert.assertTrue(this.googlePage.getSearchResults().isAt());
         System.out.println("Google search results displayed..");
-        screenshot.takeScreenshot("GoogleTestSearchResult.png");
         Assert.assertTrue(this.googlePage.getSearchResults().getCount() > 1);
         System.out.println("Google search test completed..");
+        this.screenshot.takeScreenshot();
+        this.googlePage.closeBrowser();
     }
 }
