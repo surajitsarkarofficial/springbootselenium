@@ -1,4 +1,4 @@
-package com.springbootselenium.springbootseleniumproject.config;
+package com.springbootselenium.springbootseleniumproject.core.Scope;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;

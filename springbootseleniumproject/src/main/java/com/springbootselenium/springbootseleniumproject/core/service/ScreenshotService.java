@@ -1,7 +1,6 @@
-package com.springbootselenium.springbootseleniumproject.util;
+package com.springbootselenium.springbootseleniumproject.core.service;
 
 import com.github.javafaker.Faker;
-import com.springbootselenium.springbootseleniumproject.config.FakerConfig;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;
 
 import javax.annotation.PostConstruct;
@@ -17,8 +17,10 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 @Lazy //This means that the Screenshot util will be constructed by Spring boot only when it is being used.
-@Component
-public class ScreenshotUtil {
+//@Component
+@Service //Its nothing but Component.
+// Spring boot just created a alias for Component to use it for classes which provides service.
+public class ScreenshotService {
 
     //@Autowired
     //private WebDriver driver;

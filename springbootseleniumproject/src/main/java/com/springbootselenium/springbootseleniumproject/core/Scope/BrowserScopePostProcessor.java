@@ -1,4 +1,4 @@
-package com.springbootselenium.springbootseleniumproject.config;
+package com.springbootselenium.springbootseleniumproject.core.Scope;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;

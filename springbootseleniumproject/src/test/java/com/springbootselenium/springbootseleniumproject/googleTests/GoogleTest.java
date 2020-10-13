@@ -1,8 +1,9 @@
 package com.springbootselenium.springbootseleniumproject.googleTests;
 
 import com.springbootselenium.springbootseleniumproject.SpringBaseTestNGTests;
+import com.springbootselenium.springbootseleniumproject.core.annotation.LazyAutowired;
 import com.springbootselenium.springbootseleniumproject.page.google.GooglePage;
-import com.springbootselenium.springbootseleniumproject.util.ScreenshotUtil;
+import com.springbootselenium.springbootseleniumproject.core.service.ScreenshotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.testng.Assert;
@@ -12,13 +13,11 @@ import java.io.IOException;
 
 public class GoogleTest extends SpringBaseTestNGTests {
 
-    @Lazy
-    @Autowired
+    @LazyAutowired
     private GooglePage googlePage;
 
-    @Lazy
-    @Autowired
-    private ScreenshotUtil screenshot;
+    @LazyAutowired
+    private ScreenshotService screenshot;
 
     @Test
     public void googleTest() throws IOException {

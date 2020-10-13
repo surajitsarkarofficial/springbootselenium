@@ -1,5 +1,6 @@
-package com.springbootselenium.springbootseleniumproject.annotation;
+package com.springbootselenium.springbootseleniumproject.core.annotation;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -7,10 +8,9 @@ import org.springframework.stereotype.Component;
 import java.lang.annotation.*;
 
 @Lazy
-@Component
-@Scope("prototype")
+@Configuration
 @Documented
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface PageFragment {
+public @interface LazyConfiguration {
 }
