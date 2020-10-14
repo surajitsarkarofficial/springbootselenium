@@ -1,4 +1,4 @@
-package com.springbootselenium.springbootseleniumproject.config;
+package com.springbootselenium.springbootseleniumproject.core.config;
 
 import com.github.javafaker.Faker;
 import org.springframework.context.annotation.Bean;

@@ -1,12 +1,12 @@
-package com.springbootselenium.springbootseleniumproject.config;
+package com.springbootselenium.springbootseleniumproject.core.config;
 
-import com.springbootselenium.springbootseleniumproject.annotation.LazyConfiguration;
+import com.springbootselenium.springbootseleniumproject.core.annotation.LazyConfiguration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 
 //@Lazy
 //@Configuration
@@ -17,6 +17,7 @@ public class WebDriverWaitConfig {
     public int timeout;
 
     @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public WebDriverWait webDriverWait(WebDriver driver)
     {
         return new WebDriverWait(driver,timeout);
