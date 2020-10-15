@@ -1,6 +1,7 @@
 package com.springbootselenium.springbootseleniumproject.page.flights;
 
 import com.springbootselenium.springbootseleniumproject.core.annotation.Page;
+import com.springbootselenium.springbootseleniumproject.core.annotation.Screenshot;
 import com.springbootselenium.springbootseleniumproject.page.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +28,7 @@ public class FlightSearch extends Base {
         this.driver.manage().window().maximize();
     }
 
+    @Screenshot
     public List<String> getLabels()
     {
         LinkedList<String> labelList = new LinkedList<>();
