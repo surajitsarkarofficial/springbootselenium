@@ -48,4 +48,8 @@ public class ScreenshotService {
 
         FileCopyUtils.copy(sourceFile,path.resolve(faker.name().fullName()+".png").toFile());
     }
+
+    public byte[] getScreenshot() throws IOException {
+         return ((TakesScreenshot) this.ctx.getBean(WebDriver.class)).getScreenshotAs(OutputType.BYTES);
+    }
 }
